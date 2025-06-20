@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from locators import REGISTER_BUTTON, PASS_AREA, AVATAR_BUTTON, EMAIL_AREA, ENTER_BUTTON
+from locators import REGISTER_BUTTON, PASS_AREA, AVATAR_BUTTON, EMAIL_AREA, ENTER_BUTTON, TEXT_LOG_USER
 
 def test_login_user(driver):
 
@@ -26,7 +26,7 @@ def test_login_user(driver):
     assert avatar.is_displayed()
 
     #проверка имени пользователя
-    element = wait.until(EC.visibility_of_element_located((By.XPATH, "//h3[text()='User.']")))
+    element = wait.until(EC.visibility_of_element_located(TEXT_LOG_USER))
     assert element.text == 'User.'
 
     #проверка текущего URL
