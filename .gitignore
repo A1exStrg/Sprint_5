@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtualenv
+venv/
+.venv/
+ENV/
+
+# Pytest
+.pytest_cache/
+
+# Selenium WebDriver
+chromedriver
+chromedriver.exe
+
+# IDE
+.idea/
+.vscode/
+
+# Logs / temp
+*.log
+*.tmp
+*.bak
